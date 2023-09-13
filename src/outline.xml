@@ -1,0 +1,92 @@
+<TestSuite set = "1">  
+  <url>https://demoqa.com/login</url>
+  <TestCase>    
+    <Scenario>Normal Login</Scenario>
+    <Action>      
+      <type>Maximize</type>
+    </Action>
+    <Action set="1">      
+      <type>Input Text</type>
+      <locator>username</locator>
+      <text>valid_username</text>
+    </Action>
+    <Action set="1">      
+      <type>Input Text</type>
+      <locator>password</locator>
+      <text>valid_password</text>
+    </Action>
+    <Action>      
+      <type>Click Element</type>
+      <locator>login_button</locator>
+    </Action>
+    <Validation>      
+      <type>URLValidation</type>
+      <url>https://demoqa.com/profile</url>
+    </Validation>
+  </TestCase>
+  <TestCase>    
+    <Scenario>Wrongusername</Scenario>
+    <Action>      
+      <type>Maximize</type>
+    </Action>
+    <Action>      
+      <type>Input Text</type>
+      <locator>username</locator>
+      <text>invalid_username</text>
+    </Action>
+    <Action>      
+      <type>Input Text</type>
+      <locator>password</locator>
+      <text>valid_password</text>
+    </Action>
+    <Action>      
+      <type>Click Element</type>
+      <locator>login_button</locator>
+    </Action>
+    <Validation>      
+      <type>PageContainValidation</type>
+      <text>Invalid username or password!</text>
+    </Validation>
+  </TestCase>
+  <TestCase>    
+    <Scenario>EmptyUsername</Scenario>
+    <Action>      
+      <type>Maximize</type>
+    </Action>
+    <Action>      
+      <type>Input Text</type>
+      <locator>username</locator>
+      <text>empty</text>
+    </Action>
+    <Action>      
+      <type>Input Text</type>
+      <locator>password</locator>
+      <text>valid_password</text>
+    </Action>
+    <Action>      
+      <type>Click Element</type>
+      <locator>login_button</locator>
+    </Action>
+  </TestCase>
+  <TestCase>    
+    <Scenario>WrongPassword</Scenario>
+    <Action>      
+      <type>Input Text</type>
+      <locator>username</locator>
+      <text>valid_username</text>
+    </Action>
+    <Action>      
+      <type>Input Text</type>
+      <locator>password</locator>
+      <text>invalid_password</text>
+    </Action>
+    <Action>      
+      <type>Click Element</type>
+      <locator>login_button</locator>
+    </Action>
+    <Validation>      
+      <type>PageContainValidation</type>
+      <text>Invalid username or password!</text>
+    </Validation>
+  </TestCase>
+</TestSuite>

@@ -1,0 +1,8 @@
+username,//*[@id="user-name"]
+valid_username,standard_user,problem_user
+password,//*[@id="password"]
+valid_password,secret_sauce
+login_button,//*[@id="login-button"]
+locked_username,locked_out_user
+invalid_password,invalid_pass1,invalid_pass2,invalid_pass3
+empty,${EMPTY}
