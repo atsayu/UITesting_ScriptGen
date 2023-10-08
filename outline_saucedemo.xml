@@ -1,87 +1,56 @@
-<TestSuite>  
+<TestSuite>
   <url>https://www.saucedemo.com/</url>
-  <TestCase>    
-    <Scenario>Normal Login</Scenario>
-    <Action>      
-      <type>Input Text</type>
-      <locator>username</locator>
-      <text>valid_username</text>
-    </Action>
-    <Action>      
-      <type>Input Text</type>
-      <locator>password</locator>
-      <text>valid_password</text>
-    </Action>
-    <Action>      
+  <TestCase>
+    <Scenario>NormalLogin</Scenario>
+    <LogicExpressionOfActions>
+      <type>or</type>
+      <LogicExpressionOfActions>
+        <type>and</type>
+        <LogicExpressionOfActions>
+          <type>Input Text</type>
+          <locator>test1</locator>
+          <text>test1_valid</text>
+        </LogicExpressionOfActions>
+        <LogicExpressionOfActions>
+          <type>Input Text</type>
+          <locator>test2</locator>
+          <text>test2_valid</text>
+        </LogicExpressionOfActions>
+      </LogicExpressionOfActions>
+      <LogicExpressionOfActions>
+        <type>and</type>
+        <LogicExpressionOfActions>
+          <type>Input Text</type>
+          <locator>test2</locator>
+          <text>test2_valid</text>
+        </LogicExpressionOfActions>
+        <LogicExpressionOfActions>
+          <type>Input Text</type>
+          <locator>test3</locator>
+          <text>test3_valid</text>
+        </LogicExpressionOfActions>
+      </LogicExpressionOfActions>
+      <LogicExpressionOfActions>
+        <type>and</type>
+        <LogicExpressionOfActions>
+          <type>Input Text</type>
+          <locator>test3</locator>
+          <text>test3_valid</text>
+        </LogicExpressionOfActions>
+        <LogicExpressionOfActions>
+          <type>Input Text</type>
+          <locator>test4</locator>
+          <text>test4_valid</text>
+        </LogicExpressionOfActions>
+      </LogicExpressionOfActions>
+    </LogicExpressionOfActions>
+    <LogicExpressionOfActions>
       <type>Click Element</type>
       <locator>login_button</locator>
-    </Action>
-    <Validation>      
+    </LogicExpressionOfActions>
+    <Validation>
       <type>URLValidation</type>
       <url>https://www.saucedemo.com/inventory.html</url>
-    </Validation>
-  </TestCase>
-  <TestCase>    
-    <Scenario>Locked</Scenario>
-    <Action>      
-      <type>Input Text</type>
-      <locator>username</locator>
-      <text>locked_username</text>
-    </Action>
-    <Action>      
-      <type>Input Text</type>
-      <locator>password</locator>
-      <text>valid_password</text>
-    </Action>
-    <Action>      
-      <type>Click Element</type>
-      <locator>login_button</locator>
-    </Action>
-    <Validation>      
-      <type>PageContainValidation</type>
-      <text>Sorry, this user has been locked out.</text>
-    </Validation>
-  </TestCase>
-  <TestCase>    
-    <Scenario>WrongPassword</Scenario>
-    <Action>      
-      <type>Input Text</type>
-      <locator>username</locator>
-      <text>valid_username</text>
-    </Action>
-    <Action>      
-      <type>Input Text</type>
-      <locator>password</locator>
-      <text>invalid_password</text>
-    </Action>
-    <Action>      
-      <type>Click Element</type>
-      <locator>login_button</locator>
-    </Action>
-    <Validation>      
-      <type>PageContainValidation</type>
-      <text>Username and password do not match any user in this service</text>
-    </Validation>
-  </TestCase>
-  <TestCase>    
-    <Scenario>EmptyPassword</Scenario>
-    <Action>      
-      <type>Input Text</type>
-      <locator>username</locator>
-      <text>valid_username</text>
-    </Action>
-    <Action>      
-      <type>Input Text</type>
-      <locator>password</locator>
-      <text>empty</text>
-    </Action>
-    <Action>      
-      <type>Click Element</type>
-      <locator>login_button</locator>
-    </Action>
-    <Validation>      
-      <type>PageContainValidation</type>
-      <text>Username is required</text>
     </Validation>
   </TestCase>
 </TestSuite>
