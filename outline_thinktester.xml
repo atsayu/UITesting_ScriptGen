@@ -1,0 +1,67 @@
+<TestSuite>  
+  <url>https://thinking-tester-contact-list.herokuapp.com/addContact</url>
+  <TestCase>    
+    <Scenario>register</Scenario>
+    <LogicExpressionOfActions>      
+      <type>and</type>
+      <LogicExpressionOfActions>        
+        <type>Input Text</type>
+        <locator>firstName</locator>
+        <text>first_name</text>
+      </LogicExpressionOfActions>
+      <LogicExpressionOfActions>        
+        <type>Input Text</type>
+        <locator>lastName</locator>
+        <text>last_name</text>
+      </LogicExpressionOfActions>
+    </LogicExpressionOfActions>
+    <LogicExpressionOfActions>      
+      <type>Input Text</type>
+      <locator>dateBirth</locator>
+      <text>date_birth</text>
+    </LogicExpressionOfActions>
+    <LogicExpressionOfActions>      
+      <type>Input Text</type>
+      <locator>email</locator>
+      <text>valid_email</text>
+    </LogicExpressionOfActions>
+    <LogicExpressionOfActions>      
+      <type>Input Text</type>
+      <locator>phone</locator>
+      <text>valid_phone</text>
+    </LogicExpressionOfActions>
+    <LogicExpressionOfActions>      
+      <type>Input Text</type>
+      <locator>streetAddress1</locator>
+      <text>street_address_1</text>
+    </LogicExpressionOfActions>
+    <LogicExpressionOfActions>      
+      <type>Input Text</type>
+      <locator>streetAddress2</locator>
+      <text>street_address_2</text>
+    </LogicExpressionOfActions>
+    <LogicExpressionOfActions>      
+      <type>Input Text</type>
+      <locator>city</locator>
+      <text>valid_city</text>
+    </LogicExpressionOfActions>
+    <LogicExpressionOfActions>      
+      <type>Input Text</type>
+      <locator>stateProvince</locator>
+      <text>state_province</text>
+    </LogicExpressionOfActions>
+    <LogicExpressionOfActions>      
+      <type>Input Text</type>
+      <locator>postalCode</locator>
+      <text>postal_code</text>
+    </LogicExpressionOfActions>
+    <LogicExpressionOfActions>      
+      <type>Click Element</type>
+      <locator>submitButton</locator>
+    </LogicExpressionOfActions>
+    <Validation>      
+      <type>URLValidation</type>
+      <url>https://thinking-tester-contact-list.herokuapp.com/contactList</url>
+    </Validation>
+  </TestCase>
+</TestSuite>

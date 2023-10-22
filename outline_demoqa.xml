@@ -1,0 +1,27 @@
+<TestSuite>  
+  <url>https://demoqa.com/login</url>
+  <TestCase>    
+    <Scenario>login</Scenario>
+    <LogicExpressionOfActions>      
+      <type>and</type>
+      <LogicExpressionOfActions>        
+        <type>Input Text</type>
+        <locator>userName</locator>
+        <text>username_demoqa</text>
+      </LogicExpressionOfActions>
+      <LogicExpressionOfActions>        
+        <type>Input Text</type>
+        <locator>passWord</locator>
+        <text>password_demoqa</text>
+      </LogicExpressionOfActions>
+    </LogicExpressionOfActions>
+    <LogicExpressionOfActions>      
+      <type>Click Element</type>
+      <locator>loginButton</locator>
+    </LogicExpressionOfActions>
+    <Validation>      
+      <type>URLValidation</type>
+      <url>https://demoqa.com/profile</url>
+    </Validation>
+  </TestCase>
+</TestSuite>
