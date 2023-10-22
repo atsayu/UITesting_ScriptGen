@@ -1,7 +1,0 @@
-username,//*[@id="userName"]
-valid_username,quyenhoang03
-password,//*[@id="password"]
-valid_password,Testing@123
-login_button,//*[@id="login"]
-invalid_username,invalid_1,invalid_2,invalid_3
-empty,${EMPTY}
